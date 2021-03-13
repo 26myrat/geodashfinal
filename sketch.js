@@ -70,8 +70,9 @@ function draw() {
   if(ground.x < ground.width/2) {
     ground.x = 700
   }
-  if (keyWentDown("space")) {
+  if (touches.length>0 || keyWentDown("space")) {
     geoMan.velocityY = -10
+    touches = []
   }
   geoMan.velocityY = geoMan.velocityY +0.5
 
